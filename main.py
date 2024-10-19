@@ -1,13 +1,13 @@
 
 def count_batteries_by_health(present_capacities):
    rated_capacity = 120  # rated capacity in Ah
-    counts = {
+   counts = {
         "healthy": 0,
         "exchange": 0,
         "failed": 0
     }
 
-    for present_capacity in present_capacities:
+   for present_capacity in present_capacities:
         # Calculate SoH
         soh = (100 * present_capacity) / rated_capacity
         
@@ -19,7 +19,7 @@ def count_batteries_by_health(present_capacities):
         else:
             counts["failed"] += 1
 
-    return counts
+   return counts
 
 
 
